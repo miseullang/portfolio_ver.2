@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoonseul_Portfolio_ver.2</title>
+    <link href="./css/common.css" type="text/css" rel="stylesheet">
+    <link href="./css/pc.css" type="text/css" rel="stylesheet">
+    <script defer src="./script/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="hiddenMenuWrap">
+            <div class="hiddenMenu borderColor">
+                <div class="hiddenHeader">About</div>
+            </div>
+            <div class="hiddenMenu borderColor">
+                <div class="hiddenHeader">Skills</div>
+            </div>
+            <div class="hiddenMenu borderColor">
+                <div class="hiddenHeader">Portfolio</div>
+            </div>
+            <div class="hiddenMenu">
+                <div class="hiddenHeader">Contact</div>
+            </div>
+        </div>
+        <div class="fixButWrap borderColor">
+            <a class="fixBut topBut" href="#top">↑</a>
+            <div class="fixBut menuBut borderColor">
+                <input type="checkbox" id="menuIcon">
+                <label for="menuIcon" class="hideMenuBut">
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+        <header class="borderColor">
+            <div class="logoBox borderColor">
+                <a href="#">
+                    <img src="./img/logo.png" alt="메인로고">
+                </a>
+            </div>
+            <ul class="topMenuWrap">
+                <li class="topMenu">
+                    <a href="#about">About</a>
+                    <ul class="subMenuWrap borderColor">
+                        <li class="subMenu borderColor">
+                            <a href="#about">profile</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="#about">education</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="#about">license</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="topMenu">
+                    <a href="#skills">Skills</a>
+                    <ul class="subMenuWrap borderColor">
+                        <li class="subMenu borderColor">
+                            <a href="#skills">program</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="#skills">design/media</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="#skills">document</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="topMenu">
+                    <a href="#personal">Personal</a>
+                    <ul class="subMenuWrap borderColor">
+                        <li class="subMenu borderColor">
+                            <a href="http://www.ssamsweb.com/0821/kys/mmaa/">MMAA</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="http://www.ssamsweb.com/0821/kys/aladin/">aladin</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="http://www.ssamsweb.com/0821/kys/">ctd pretzel</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="#">etude</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="topMenu">
+                    <a href="#team">Team</a>
+                    <ul class="subMenuWrap borderColor">
+                        <li class="subMenu borderColor">
+                            <a href="#">pawinhand</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="http://www.ssamsweb.com/0821/kys/diptyque/">diptque</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="http://www.ssamsweb.com/0821/kys/ediya_upload231227/">ediya</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="topMenu">
+                    <a href="#contact">Contact</a>
+                    <ul class="subMenuWrap borderColor">
+                        <li class="subMenu borderColor">
+                            <a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fm.mail.naver.com%2F" target="_blank">e-mail</a>
+                        </li>
+                        <li class="subMenu borderColor">
+                            <a href="https://open.kakao.com/o/syEly7Yf" target="_blank">kakoTalk</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="etcBox borderColor">
+                <div class="modeToggle">
+                    <div class="toggleBut"></div>
+                    <span>light</span>
+                    <span>dark</span>
+                </div>
+            </div>
+        </header>
+        <section class="page mainPage">
+            <div class="wordWrap">
+                <div class="firstLine txtBox">
+                    <h2 class="blackTxt txt" style="animation-delay: -0.4s;">바다의 무한함처럼 끝없는 열정을 가진</h2>
+                    <h2 class="grayTxt txt">바다의 무한함처럼 끝없는 열정을 가진</h2>
+                </div>
+                <div class="secondLine txtBox">
+                    <h2 class="blackTxt txt" style="animation-delay: 0s;">예비 웹 개발자 권윤슬입니다.</h2>
+                    <h2 class="grayTxt txt">예비 웹 개발자 권윤슬입니다.</h2>
+                </div>
+            </div>
+            <video class="mainVideo" src="./img/yoonseul.mp4" type="video/mp4" loop autoplay muted></video>
+        </section>
+        <section class="page aboutPage" id="about">
+            <div class="sticky">
+                <h2 class="aboutTitle">About Me</h2>
+                <div class="card-frame">
+                    <div class="card">
+                        <div class="front profileCard">
+                            <img src="./img/seaOtter.gif" alt="이미지">
+                            <h4>권윤슬</h4>
+                            <span>1998 . 10 . 23</span>
+                        </div>
+                        <div class="back">PROFILE</div>
+                    </div>
+                    <div class="card educationCard txtCard">
+                        <div class="front">
+                            <p><span>2024. 02</span>부경대학교 <br>평생교육/상담학과 졸업</p>
+                            <p><span>2024. 01</span>NCS기반 UI/UX 반응형 웹디자인 & 웹퍼블리셔<br>(디자인&코딩) 양성과정 수료</p>
+                        </div>
+                        <div class="back">EDUCATION</div>
+                    </div>
+                    <div class="card licenseCard txtCard">
+                        <div class="front">
+                            <p><span>2023. 12</span> 컴퓨터그래픽스운용기능사<br> 웹디자인기능사</p>
+                            <p><span>2023. 08</span> 워드프로세서<br> 자동차운전면허 2종보통</p>
+                            <p><span>2016. 04</span> ITQ 한글, 엑셀</p>
+                            <p><span>2016. 03</span> GTQ 포토샵</p>
+                            <p><span>2016. 02</span> 컴퓨터활용능력 2급</p>
+                        </div>
+                        <div class="back">LICENSE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page skillPage" id="skills">
+            <div class="skillsWrapper borderColor">
+                <div class="leftBox borderColor">
+                    <h2 class="skillTitle">Skills</h2>
+                    <img src="./img/sparkle_darker.jpg" alt="사진">
+                </div>
+                <div class="rightBox">
+                    <div class="skillTab borderColor active">
+                        <div class="skillHeader">
+                            <span>01.</span><div>코딩 툴</div><i>-</i>
+                        </div>
+                        <div class="skillBody">
+                            <span class="tools">HTML</span><span class="tools">CSS</span>
+                            <span class="tools">Javascript</span><span class="tools">JQuery</span>
+                            <span class="tools">React</span>
+                            <div class="bottomText">Coding Tool</div>
+                        </div>
+                    </div>
+                    <div class="skillTab borderColor">
+                        <div class="skillHeader">
+                            <span>02.</span><div>디자인 / 미디어 툴</div><i>+</i>
+                        </div>
+                        <div class="skillBody">
+                            <span class="tools">Photoshop</span><span class="tools">Illustrator</span>
+                            <span class="tools">Figma</span><span class="tools">Premiere Pro</span>
+                            <div class="bottomText">Design<br>& Media Tool</div>
+                        </div>
+                    </div>
+                    <div class="skillTab borderColor">
+                        <div class="skillHeader">
+                            <span>03.</span><div>문서 작성 툴</div><i>+</i>
+                        </div>
+                        <div class="skillBody">
+                            <span class="tools">Excel</span><span class="tools">Power Point</span>
+                            <span class="tools">Ms Word</span><span class="tools">한글</span><span class="tools">Visio</span>
+                            <div class="bottomText">word<br>processing Tool</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page personalPage" id="personal">
+            <div class="titleWrap borderColor">
+                <h2 class="portfolioTitle">
+                    <span style="animation-delay: 0s;">P</span>
+                    <span style="animation-delay: 0.2s;">o</span>
+                    <span style="animation-delay: 0.4s;">r</span>
+                    <span style="animation-delay: 0.6s;">t</span>
+                    <span style="animation-delay: 0.8s;">f</span>
+                    <span style="animation-delay: 1s;">o</span>
+                    <span style="animation-delay: 1.2s;">l</span>
+                    <span style="animation-delay: 1.4s;">i</span>
+                    <span style="animation-delay: 1.6s;">o</span>
+                </h2>
+                <em>personal</em>
+            </div>
+            <div class="inPage">
+                <div class="leftCon">
+                    <div class="toolBox">
+                        <span class="tools">swiper.js</span><br>
+                        <span class="tools">Photoshop</span><span class="tools">Premiere Pro</span><br>
+                        <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">Javascript</span><br>
+                    </div>
+                    <p>공백 없이 화면에 가득찬 텍스트로 피로감을 주던 기존 사이트를, <br>
+                    공백을 활용해 재배치하고 애니메이션 효과를 활용해 부드럽게 나타나도록
+                    구성했습니다.<br>
+                    <strong>반응형</strong>으로 제작하였으며, <strong>검색창</strong>과 <strong>로그인</strong>화면까지 세밀히 구현하였습니다.
+                    </p>
+                </div>
+                <div class="rightCon borderColor">
+                    <h3 class="projectName">MMAA</h3>
+                    <div class="shortCutBox">
+                        <a href="https://www.mmaa.or.kr/web/main/index.do" target="_blank">origin site →</a>
+                        <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">renewal site →</a>
+                    </div>
+                    <div class="imgBox">
+                        <img src="./img/Screenshot 2024-01-21 at 13.40.39.JPG" alt="mmaa 미리보기">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page teamPage" id="team">
+            <div class="stickyBox borderColor">
+                <h2 class="teamTitle">Team Project</h2>
+                <div class="inSection">
+                    <div class="projectTitle borderColor">
+                        <h3>● pawinhand</h3>
+                        <div class="shortCutBox">
+                            <a href="https://www.mmaa.or.kr/web/main/index.do" target="_blank">origin site →</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">renewal site →</a>
+                        </div>
+                    </div>
+                    <div class="projectContent temporary">
+                        <p>제작중인 페이지입니다.<br>
+                            1/29일에 만나요!
+                        </p>
+                    </div>
+                </div>
+                <div class="inSection">
+                    <div class="projectTitle borderColor">
+                        <h3>● diptyque</h3>
+                        <div class="shortCutBox">
+                            <a href="https://www.diptyqueparis.com/en_eu/?cc=KR" target="_blank">origin site →</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/diptque/" target="_blank">renewal site →</a>
+                        </div>
+                    </div>
+                    <div class="projectContent">
+                        <img src="./img/diptyque_preview.jpg" alt="딥티크 프리뷰">
+                        <div class="participant gridItem">2인 프로젝트</div>
+                        <div class="plan gridItem">기획 및 시안 작업 10/18 - 20<br>
+                            퍼블리싱 10/21 - 10/24<br>
+                            피드백 & 수정 10/25 - 26
+                        </div>
+                        <div class="part gridItem">
+                            시안 : 각자 페이지를 레퍼런스와 사용할 이미지/영상을 보내면 상대가 정리하는 방식으로 공동 작업
+                            퍼블리싱 : main 및 productPage 담당, 취합 담당
+                            기타 영상 및 이미지 편집 담당
+                        </div>
+                        <div class="projectText gridItem">
+                            이렇게 저렇게 해서 만들게 되었습니다
+                        </div>
+                        <div class="usingTool gridItem">
+                            <span class="tools">Photoshop</span><span class="tools">Illustrator</span><span class="tools">Premiere Pro</span><br>
+                            <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">JQuery</span><br>    
+                        </div>
+                    </div>
+                </div>
+                <div class="inSection">
+                    <div class="projectTitle borderColor">
+                        <h3>● ediya</h3>
+                        <div class="shortCutBox">
+                            <a class=" borderColor" href="https://ediya.com/" target="_blank">origin site →</a>
+                            <a class=" borderColor" href="http://www.ssamsweb.com/0821/kys/ediya_upload231227/" target="_blank">renewal site →</a>
+                        </div>
+                    </div>
+                    <div class="projectContent">
+                        <img src="./img/ediya_preview.png" alt="이디야 프리뷰">
+                        <div class="participant gridItem">3인 프로젝트 → 2인 리팩토링</div>
+                        <div class="plan gridItem">기획 및 시안 작업 10/18 - 20<br>
+                            퍼블리싱 10/21 - 10/24<br>
+                            피드백 & 수정 10/25 - 26
+                        </div>
+                        <div class="part gridItem">
+                            시안 : 각자 페이지를 레퍼런스와 사용할 이미지/영상을 보내면 상대가 정리하는 방식으로 공동 작업
+                            퍼블리싱 : main 및 productPage 담당, 취합 담당
+                            기타 영상 및 이미지 편집 담당
+                        </div>
+                        <div class="projectText gridItem">
+                            이렇게 저렇게 해서 만들게 되었습니다
+                        </div>
+                        <div class="usingTool gridItem">
+                            <span class="tools">Photoshop</span><span class="tools">Illustrator</span><br>
+                            <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">JQuery</span><br>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page contactPage" id="contact">
+            <!-- <div class="fishBox">
+                <img src="./img/whiteFish.png" alt="흰물고기">
+                <img src="./img/whiteFish.png" alt="흰물고기">
+                <img src="./img/whiteFish.png" alt="흰물고기">
+                <img src="./img/whiteFish.png" alt="흰물고기">
+            </div> -->
+            <div class="conBox borderColor">
+                <a href="#" class="contactLink borderColor blog">Blog <i></i></a>
+                <a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fm.mail.naver.com%2F" class="contactLink borderColor eMail">E-mail <i></i></a>
+                <a href="https://open.kakao.com/o/syEly7Yf" class="contactLink borderColor kakoTalk">kakoTalk <i></i></a>
+            </div>
+            <footer>
+                <h4 class="footerTitle">Yoonseul<br>Portfolio<br>ver.2</h4>
+                <div class="footerCopyright borderColor">
+                    <div class="footFirstLine">
+                        <p class="borderColor">ⓒ2024</p><p>Kweon Yoonseul.</p><p class="borderColor">All Rights Reserved.</p>
+                        <p class="borderColor">본 사이트는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+                        <a class="borderColor" href="#"><span>ver.1</span><i></i></a>
+                        <a class="borderColor" href="#"><span>site plan</span><i></i></a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+<!--
+	Yoonseul Portfolio.
+	  ____                        ___      
+	/\  _`\                      /\_ \     
+	\ \,\L\_\      __    __  __  \//\ \    
+	 \/_\__ \    /'__`\ /\ \/\ \   \ \ \   
+	   /\ \L\ \ /\  __/ \ \ \_\ \   \_\ \_ 
+	   \ `\____\\ \____\ \ \____/   /\____\
+		\/_____/ \/____/  \/___/    \/____/
+										   
+	본 사이트는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+    ⓒ2024 Kweon Yoonseul. All Rights Reserved. -->
+</body>
+</html>

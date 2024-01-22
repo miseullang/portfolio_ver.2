@@ -1,0 +1,704 @@
+.wrap{
+    padding: 0 2.5rem; box-sizing: border-box;
+    background-color: #ffffff; color: #111;
+}
+/* 공통영역 ========================= */
+.tools{
+    display: inline-block;
+    padding: 5px 10px; box-sizing: border-box;
+    border-radius: 2.5px;
+    background-color: rgba(127, 127, 127, 0.5); color: #ffffff;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-right: 15px;
+}    
+/* 2페이지부터 등장하는 고정 메뉴 ========================================== */
+.fixButWrap{
+    width: 60px; height: 120px;
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+    border: 1px solid; box-sizing: border-box;
+    border-color: #111;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.fixBut{
+    width: 60px; height: 60px;
+}
+.topBut{
+    display: flex; justify-content: center; align-items: center;
+    font-size: 2rem;
+    background-color: #ffffff; color: #111;
+}
+.menuBut{
+    width: 60px; height: 60px;
+    background-color: #111; color: #ffffff;
+    position: absolute; bottom: 0; left: 0;
+    border-top: 1px solid; border-color: #111;
+    box-sizing: border-box;
+}
+/* 숨김메뉴 ----------------------------------- */
+#menuIcon{
+    display: none;
+}
+#menuIcon + label{
+    display: block;
+    width: 30px; height: 15px;
+    position: absolute; top: 22.5px; left: 15px;
+    cursor: pointer;
+}
+#menuIcon + label span{
+    display: block;
+    position: absolute;
+    width: 100%; height: 2px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    transition: .35s;
+}
+#menuIcon + label span:first-child{
+    top: 0;
+}
+#menuIcon + label span:last-child{
+    bottom: 0;
+}
+
+/* 메뉴버튼 체크 후 */
+#menuIcon:checked + label span:first-child{
+    top: calc(50% - 1px);
+    transform: rotate(45deg);
+}
+#menuIcon:checked + label span:last-child{
+    bottom: calc(50% - 1px);
+    transform: rotate(-45deg);
+}
+
+/* 2페이지부터 등장하는 고정 메뉴 끝 ======================================= */
+
+/* 숨김메뉴 ================================================================ */
+.hiddenMenuWrap{
+    width: 100vw; height: 100vh;
+    position: fixed; top: 0; left: 0; z-index: 99;
+    display: flex; justify-content: space-around;
+    background-color: #ffffff; color: #111;
+    visibility: hidden;
+}
+.hiddenMenu{
+    border: 1px solid #111; box-sizing: border-box;
+    border-top: none; border-bottom: none;
+    width: 25%; height: 100%;
+    overflow: hidden;
+}
+.hiddenHeader{
+    font-size: 2rem;
+    width: calc(100vw / 4); height: 100%;
+    display: flex; justify-content: center; align-items: center;
+}
+/* .hiddenMenu:not(:last-child){
+    border-right: 1px solid #111; box-sizing: border-box;
+} */
+/* 숨김메뉴 끝 ================================================================ */
+
+/* 헤더 ==================================================================== */
+header{
+    width: 100%; height: 80px;
+    border-bottom: 1px solid; border-color: #111;
+    box-sizing: border-box;
+    display: flex; justify-content: space-around;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative; z-index: 98;
+}
+.logoBox{
+    width: 220px; height: 100%;
+    border-right: 1px solid; border-color: #111;
+    box-sizing: border-box;
+    padding: 1rem; box-sizing: border-box;
+
+}
+.logoBox img{
+    object-fit: contain;
+}
+.etcBox{
+    width: 220px; height: 100%;
+    border-left: 1px solid; border-color: #111;
+    box-sizing: border-box;
+    padding: 1rem; box-sizing: border-box;
+    display: flex; justify-content: space-around; align-items: center;
+}
+.topMenuWrap{
+    width: calc(100% - 400px); height: 80px;
+    display: flex; justify-content: center; align-items: center;
+}
+.topMenu:not(:last-child){
+    margin-right: 15px;
+}
+
+.topMenu{
+    width: 10rem;
+    position: relative;
+    transition: all 0.4s;
+}
+.subMenuWrap{
+    width: 100%; height: 0;
+    overflow: hidden;
+    position: absolute; top: 51px; left: 0;
+    transition: all 0.4s;
+}
+.topMenu:hover .subMenuWrap{
+    height: 200px;
+}
+.subMenu{
+    height: 50px;
+    padding: 0.8rem 1rem; box-sizing: border-box;
+    background-color: #ffffff;
+    color: #111;
+    border: 1px solid #111;
+    border-top: none;
+}
+.subMenu:hover{
+    background-color: #111;
+    color: #ffffff;
+}
+/* 라이트/다크모드 토글 ------------- */
+.modeToggle{
+    width: 100px; height: 50px;
+    padding: 0.5rem; box-sizing: border-box;
+    display: flex; justify-content: space-around; align-items: center;
+    border-radius: 100px;
+    box-shadow: -5px -5px 10px rgba(127, 127, 127, 0.5);
+    font-size: 0.9rem;
+    position: relative;
+    cursor: pointer;
+
+}
+.toggleBut{
+    width: 50px; height: 50px;
+    border-radius: 50px;
+    position: absolute; top: 0; left: 0;
+    background-color: #0f63ff;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5) inset;
+    transition: all 0.4s;
+}
+
+.lightMode{
+    background-color: #ffffff;
+    color: #111;
+}
+.darkMode{
+    background-color: #111;
+    color: #ffffff;
+}
+/* 라이트/다크모드 토글 끝 ---------- */
+/* 헤더 끝 ==================================================================== */
+
+/* 메인페이지 mainPage ======================================================= */
+.mainPage{
+    height: 150vh;
+}
+.wordWrap{
+    font-size: 2.8rem;
+    position: absolute; top: 5rem; left: 0;
+    width: 100%; height: 11rem;
+}
+.txtBox{
+    position: absolute;
+    width: 100%; height: 5rem;
+    overflow: hidden;
+}
+.firstLine{
+    top: 0;
+}
+.secondLine{
+    bottom: 0;
+}
+.txt{
+    position: absolute; top: 0; left: 0;
+}
+.wordWrap .grayTxt{
+    color: #e6e6e6;
+}
+.blackTxt{
+    z-index: 3;
+    /* transition: width 1.2s cubic-bezier(0, 0, 0.45, 0.95); */
+    transition: width 1.5s ease-in-out;
+    /* animation: textFlow 5s; */
+}
+@keyframes textFlow {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.mainVideo{
+    /* height: 480px; */
+    position: absolute; top: 20rem; left: 0;
+    object-fit: cover;
+    filter: brightness(125%);
+}
+
+/* 어바웃페이지 page2 ==============================================================*/
+.aboutPage {
+    height: 500vh;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.aboutTitle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12vw;
+    transform: scale(1.5) translateY(-100%);
+    opacity: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+.visible {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+.card-frame {
+    position: absolute;
+    width: 95vw; height: 32vw;
+    display: flex; align-items: center; justify-content: space-around;
+}
+.card {
+    position: relative;
+    width: 24vw; height: 100%;
+    display: flex; justify-content: space-around; align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(100vw) translateX(100vw) rotateY(180deg);
+    transition: transform 0.1s;
+}
+.front, .back {
+    position: absolute;
+    width: 100%; height: 100%;
+    /* border-radius: 0.5rem; */
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front {
+    background-color: #ffffff; color: #111;
+    display: flex; flex-direction: column;
+     justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    border: 1px solid #111 ;
+    padding: 2rem; box-sizing: border-box;
+}
+.back {
+    transform: rotateY(180deg);
+    background-color: #111; color: #ffffff;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 4vw; font-weight: 700;
+}
+.profileCard{
+    align-items: center;
+}
+.profileCard img{
+    width: 12vw; height: 12vw;
+    min-width: 80px; min-height: 80px;
+    border-radius: 500px;
+    margin-bottom: 2rem;
+}
+.profileCard h4 {
+    width: 100%; text-align: center;
+    margin-bottom: 0.5rem;
+}
+.profileCard span {
+    width: 100%; text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.txtCard .front{
+    text-align: left;
+}
+.txtCard span{
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.txtCard p{
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+.licenseCard p{
+    margin-bottom: 0.5rem;
+}
+.licenseCard span{
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+@media screen and (orientation:portrait) {
+.card-frame {
+    display: grid;
+    height: initial;
+    width: initial;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10vw;
+    justify-items: center;
+}
+
+.card {
+    font-size: 20vw;
+    width: 35vw;
+    height: 50vw;
+}
+}
+/* 어바웃 페이지 끝 ============================================================================= */
+
+/* 스킬페이지 =================================================================================== */
+
+.skillsWrapper{
+    width: 100%; height: 800px;
+    border-top: 1px solid; border-bottom: 1px solid;
+    border-color: #111;
+    box-sizing: border-box;
+}
+.leftBox{
+    width: 30%; height: 100%;
+    border-right: 1px solid #111;
+    padding: 2.5rem 2.5rem 2.5rem 0; box-sizing: border-box;
+    font-size: 2.3rem;
+    float: left;
+}
+.skillTitle{
+    margin-bottom: 1.5rem;
+}
+.skillTitle ~ img{
+    width: 100%; height: calc(100% - 6.5rem);
+    object-fit: cover;
+}
+.rightBox{
+    width: 70%; height: 100%;
+    float: right;
+}
+.skillTab{
+    height: 158px;
+    overflow: hidden;
+}
+.skillTab:not(:last-child){
+    border-bottom: 1px solid #111;
+}
+.skillHeader{
+    width: 100%; height: 158px;
+    padding: 2.5rem; box-sizing: border-box;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 2.3rem;
+    cursor: pointer;
+    transition: all 0.6s;
+    overflow: hidden;
+}
+.skillHeader div{
+    width: calc(100% - 12rem);
+    font-weight: 600;
+}
+.skillHeader i{
+    font-size: 4rem; font-weight: 100;
+}
+.skillBody{
+    height: 320px;
+    padding: 2.5rem; box-sizing: border-box;
+    position: relative;
+}
+
+.bottomText{
+    position: absolute; bottom: -15px; right: -5px;
+    font-size: 8vw; font-weight: 700;
+    color: rgba(255,255,255,.1);
+    text-align: right;
+}
+.bottomText::selection{
+    color: #ffffff;
+}
+
+.skillTab:hover{
+    background-color: #111; color: #ffffff;
+}
+.active{
+    height: 480px;
+    background-color: #111; color: #ffffff;
+}
+/* 스킬페이지 끝 =================================================================== */
+
+/* 포트폴리오 페이지 ================================================================ */
+.innerPage{
+    width: 100%; height: 100%;
+    border: 1px solid #111;
+}
+.titleWrap{
+    position: absolute; top: 1rem; left: 0; z-index: 5;
+    width: 50%; height: 18.5rem;
+}
+.portfolioTitle {
+    font-size: 10rem;
+    display: flex; 
+    justify-content: left; 
+    align-items: center;
+    width: 20rem;
+    position: absolute; top: -1rem; left: 0;
+}
+.portfolioTitle span {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.portfolioTitle span.portActive {
+    animation: portfolioActive 0.6s forwards;
+}
+@keyframes portfolioActive {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.portfolioTitle ~ em{
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem; color: #333;
+    position: absolute; bottom: 1.5rem; left: 0;
+}
+/* 포트폴리오 페이지 안 타이틀 부분 끝 ---------------------- */
+.inPage{
+    width: calc(97vw - 2rem); height: calc(90vh - 2rem);
+    position: absolute; top: 1rem; left: 1rem;
+    display: flex; justify-content: space-around; align-items:end;
+    padding-right: 2rem; box-sizing: border-box;
+}
+.leftCon{
+    width: 65%; height: fit-content;
+    display: flex; flex-direction: column; align-items: end;
+    /* background-color: palegreen; */
+}
+.toolBox{
+    width: 100%;
+    /* background-color: palegoldenrod; */
+}
+
+.toolBox ~ p{
+    margin-top: 1.5rem;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #535353;
+}
+.rightCon{
+    width: 45%; height: 95%;
+    border: 1px solid #111;
+    padding: 0.5rem 1rem; box-sizing: border-box;
+    text-align: right;
+    border-radius: 2.5px;
+
+}
+.projectName{
+    width: 100%;
+    font-size: 3rem;
+    padding: 0.7rem 0 0.5rem 0; box-sizing: border-box;
+}
+.shortCutBox{
+    width: 100%;
+    padding: 1rem 0; box-sizing: border-box;
+    display: flex; justify-content: right; align-items: center;
+}
+.shortCutBox a{
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #111;
+}
+.shortCutBox a:not(:last-child){
+    margin-right: 15px;
+}
+.shortCutBox a:hover{
+    border-color: #111;
+    color: #111;
+    background-color: #ffffff;
+}
+.imgBox{
+    width: 100%; height: calc(100% - 10rem);
+    overflow: scroll;
+    border: 1px solid #111;
+
+}
+.rightCon img{
+    width: 100%; height: fit-content;
+    object-fit: cover;
+}
+
+/* 팀프로젝트 페이지 ======================================================== */
+.teamPage{
+    height: 300vh;
+    padding: 0;
+}
+.stickyBox{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border: 1px solid #111; box-sizing: border-box;
+}
+.teamTitle{
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+.inSection {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffff;
+}
+.projectTitle {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 6vh;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 2em;
+    background-color: #111; color: #ffffff;
+}
+.projectTitle h3{
+    font-size: 1.5rem;
+}
+.projectTitle .shortCutBox{
+    width: fit-content;
+}
+.projectTitle .shortCutBox a{
+    border-color: #ccc;
+}
+.projectContent {
+    height: 94vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3.5rem repeat(4, calc((99% - 3.5rem) / 4));
+    grid-template-areas:
+		"img participant participant"
+		"img plan plan"
+		"img part part "
+        "img projectText projectText"
+		"img usingTool usingTool";
+    /* border: 1px solid #111; */
+}
+.gridItem{
+    border-bottom: 1px solid #111;
+    border-left: 1px solid #111;
+    padding: 1rem; box-sizing: border-box;
+    font-size: 1.25rem;
+}
+.projectContent img{
+    grid-area: img;
+    height: fit-content;
+    object-fit: cover;
+}
+.participant{
+    grid-area: participant;
+    font-weight: 700;
+}
+.plan{
+    grid-area: plan;
+}
+.part{
+    grid-area: part;
+}
+.usingTool{
+    grid-area: usingTool;
+}
+.projectText{
+    grid-area: projectText;
+}
+.temporary{
+    font-size: 2rem;
+    display: flex; justify-content: center; align-items: center;
+    text-align: center;
+}
+
+/* 컨택페이지 ============================================================== */
+.contactPage{
+    height: fit-content;
+}
+.fishBox{
+    width: 150vw; height: 100px;
+    background-color: aqua;
+    display: flex; justify-content: space-around; align-items: center;
+    transform: rotate(5deg);
+    margin-left: -50px;
+}
+.fishBox img{
+    object-fit: contain;
+}
+.conBox{
+    width: 100%; height: 33.3rem;
+    margin: 7rem 0;
+    display: flex; flex-direction: column; align-items: center;
+}
+.contactLink{
+    width: 100%; height: calc(100% / 3);
+    border-top: 1px solid #111; box-sizing: border-box;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 7rem; font-weight: 500;
+}
+.contactLink i{
+    width: 8rem; height: 8rem;
+    background-color: #0f63ff;
+}
+.contactLink:first-child{
+    text-decoration:line-through;
+    font-style: italic;
+    color: #333;
+}
+.contactLink:last-child{
+    border-bottom: 1px solid #111; box-sizing: border-box;
+}
+.contactLink:hover{
+    background-color: #111;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+footer{
+    width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.footerTitle{
+    font-size: 1.2rem;
+}
+.footerCopyright{
+    width: calc(100% - 12rem);
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    box-sizing: border-box;
+}
+.footFirstLine{
+    display: flex; justify-content: space-between; align-items: center;
+}
+.footFirstLine p,.footFirstLine a{
+    padding: 0.5rem 0.8rem;
+    border-right: 1px solid #111; box-sizing: border-box;
+    text-align: center;
+    display: flex; justify-content: center; align-items: center;
+}
+.footFirstLine a:last-child{
+    border: none;
+}
+.footFirstLine i{
+    display: inline-block;
+    width: 1rem; height: 1rem;
+    margin-left: 0.5rem;
+    background-color: palegreen;
+}
