@@ -62,6 +62,7 @@ function fixButToggle(visibility,opacity) {
 
 blackTxts.forEach((blackTxt) => mainTextObserver.observe(blackTxt));
 
+// 숨김메뉴 ===============================================================
 // 고정메뉴의 버튼을 클릭했을 때 숨김메뉴 나타나기
 const hideMenuBut = document.querySelector(".hideMenuBut");
 const hiddenMenuWrap = document.querySelector(".hiddenMenuWrap");
@@ -75,7 +76,87 @@ function hiddenMenuToggle() {
   const visibilityArr = ["hidden","visible"];
   ButCount = 1 - ButCount;
   hiddenMenuWrap.style.visibility = visibilityArr[ButCount]
+  // hiddenMenuWrap의 자식 요소들에 대해서도 visibility 설정
+  const hiddenHeaders = hiddenMenuWrap.querySelectorAll(".hiddenHeader");
+  hiddenHeaders.forEach(hiddenHeader => {
+    hiddenHeader.classList.remove("clickHeaderWidth");
+    hiddenHeader.classList.remove("otherHeaderWidth");
+    hiddenHeader.classList.remove("headerWidth");
+  });
+  const hiddenMenus = hiddenMenuWrap.querySelectorAll(".hiddenMenu");
+  hiddenMenus.forEach(hiddenMenu => {
+    hiddenMenu.classList.remove("headerWidth");
+  });
+
+  const hiddenConBoxs = hiddenMenuWrap.querySelectorAll(".hiddenConBox");
+  hiddenConBoxs.forEach(hiddenConBox => {
+    hiddenConBox.classList.remove("conBoxOpen");
+  });
+
 }
+
+
+
+
+// 숨김메뉴의 hiddenMenu를 클릭하면
+// 해당 hiddenMenu는 윈도우 크기의 50%, 나머지 hiddenMenu는 50%/3
+
+const hiddenMenus = document.querySelectorAll(".hiddenMenu");
+let clickCount = 0;
+let prevClickedMenu;
+
+hiddenMenus.forEach(hiddenMenu => {
+  hiddenMenu.addEventListener('click', (event) => {
+    const clickedHeader = event.currentTarget;
+
+    // 이전에 클릭된 hiddenMenu가 있으면 해당 hiddenMenu의 클래스를 제거
+    if (prevClickedMenu && prevClickedMenu !== clickedHeader) {
+      prevClickedMenu.classList.remove("headerWidth");
+      prevClickedMenu.querySelector(".hiddenHeader").classList.remove("clickHeaderWidth");
+      prevClickedMenu.querySelector(".hiddenConBox").classList.remove("conBoxOpen");
+      prevClickedMenu.querySelector(".hiddenHeader").classList.remove("otherHeaderWidth");
+    }
+
+    // 나머지 hiddenMenu의 너비를 (윈도우 너비 - 클릭된 hiddenMenu의 너비) / 3 로 설정
+    hiddenMenus.forEach(Menu => {
+      if (Menu !== clickedHeader) {
+        Menu.querySelector(".hiddenHeader").classList.add("otherHeaderWidth");
+      } 
+      else {
+        Menu.querySelector(".hiddenHeader").classList.remove("otherHeaderWidth");
+      }
+    });
+
+    if (clickCount === 0 || prevClickedMenu !== clickedHeader) {
+      // 클릭된 hiddenMenu의 너비를 50vw로 설정
+      clickedHeader.classList.add("headerWidth");
+      // 클릭된 hiddenMenu의 자식 hiddenHeader를 선택하여 너비 조정
+      clickedHeader.querySelector(".hiddenHeader").classList.add("clickHeaderWidth");
+      // 클릭된 hiddenMenu의 자식 hiddenConBox를 열기
+      clickedHeader.querySelector(".hiddenConBox").classList.add("conBoxOpen");
+
+      // 이전에 클릭된 hiddenMenu 갱신
+      prevClickedMenu = clickedHeader;
+      clickCount = 1;
+    } else if (clickCount === 1 && prevClickedMenu === clickedHeader) {
+      // 클릭된 hiddenMenu의 너비를 원래대로
+      clickedHeader.classList.remove("headerWidth");
+      // 클릭된 hiddenMenu의 자식 hiddenHeader의 너비를 원래대로
+      clickedHeader.querySelector(".hiddenHeader").classList.remove("clickHeaderWidth");
+      // 클릭된 hiddenMenu의 자식 hiddenConBox를 닫기
+      clickedHeader.querySelector(".hiddenConBox").classList.remove("conBoxOpen");
+      clickedHeader.querySelector(".hiddenHeader").classList.remove("otherHeaderWidth");
+      
+      // 이전에 클릭된 hiddenMenu 제거
+      prevClickedMenu = null;
+      clickCount = 0;
+    }
+  });
+});
+
+
+
+// 숨김메뉴 끝 ===============================================================
 
 
 // 어바웃페이지 진입&퇴장시 어바웃타이틀 애니메이션 효과
@@ -215,6 +296,32 @@ const portfolioObserver = new IntersectionObserver(
 
 portfolioTitles.forEach((title) => { portfolioObserver.observe(title);});
 
+// 개인 포트폴리오페이지 스와이퍼 ==========================
+const personalSwiper = new Swiper('.personalPage .swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true, //버튼 클릭 여부
+    type: 'fraction', //페이징 타입 설정(종류: bullets, fraction, progress, progressbar)
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  slidesPerView:"auto" //css에 지정한 슬라이더 크기 사용
+});
+
 // 팀 포트폴리오페이지 폴더스크롤 =================================================
 class FolderScroll {
   // teamPage, stickyBox를 this로 전달하기
@@ -288,4 +395,25 @@ window.addEventListener('scroll', () => {
 // 윈도우 리사이즈시 초기값 다시 가져오기
 window.addEventListener('resize', () => {
   folderScroll.initialization()
+})
+// 팀 포트폴리오페이지 폴더스크롤 끝 =================================================
+
+
+// E-mail p태그 클릭하면 클립보드에 복사하기
+function copyEmail() {
+  // 복사할 이메일 주소를 가져옴
+  const email = "yuio3619@naver.com"
+
+  // 텍스트를 클립보드에 복사
+  navigator.clipboard.writeText(email);
+
+  // 복사되었다는 메시지를 표시
+  alert("이메일 주소가 복사되었습니다: " + email);
+}
+
+
+// 팝업창
+const notice = document.querySelector(".notice");
+notice.addEventListener('click',() => {
+  notice.style.display = "none"
 })

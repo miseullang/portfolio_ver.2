@@ -6,22 +6,55 @@
     <title>Yoonseul_Portfolio_ver.2</title>
     <link href="./css/common.css" type="text/css" rel="stylesheet">
     <link href="./css/pc.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./script/script.js"></script>
 </head>
 <body>
+    <div class="notice"><span>반응형 작업은 곧 업데이트 예정입니다. 조금만 기다려주세요!</span><i>[클릭하여 닫기]</i></div>
     <div class="wrap">
         <div class="hiddenMenuWrap">
             <div class="hiddenMenu borderColor">
-                <div class="hiddenHeader">About</div>
+                <h2 class="hiddenHeader">About</h2>
+                <div class="hiddenConBox">
+                    <a href="#about" target="_blank">profile</a>
+                    <a href="#about" target="_blank">education</a>
+                    <a href="#about" target="_blank">license</a>
+                </div>
             </div>
             <div class="hiddenMenu borderColor">
-                <div class="hiddenHeader">Skills</div>
+                <h2 class="hiddenHeader">Skills</h2>
+                <div class="hiddenConBox">
+                    <a href="#skills" target="_blank">program</a>
+                    <a href="#skills" target="_blank">design/media</a>
+                    <a href="#skills" target="_blank">document</a>
+                </div>
             </div>
             <div class="hiddenMenu borderColor">
-                <div class="hiddenHeader">Portfolio</div>
+                <h2 class="hiddenHeader">Portfolio</h2>
+                <div class="hiddenConBox">
+                    <div class="personalCon">
+                        <h3><a class="conTitle" href="#personal" target="_blank">PERSONAL</a></h3>
+                        <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">MMAA</a>
+                        <a href="http://www.ssamsweb.com/0821/kys/aladin/" target="_blank">aladin</a>
+                        <a href="http://www.ssamsweb.com/0821/kys/" target="_blank">ctd pretzel</a>
+                        <a href="http://www.ssamsweb.com/0821/kys/etude" target="_blank">etude</a>    
+                    </div>
+                    <div class="TeamCon">
+                        <h3><a class="conTitle" href="#team" target="_blank">TEAM</a></h3>
+                        <a href="#">PH store</a>
+                        <a href="http://www.ssamsweb.com/0821/kys/diptyque/" target="_blank">diptque</a>
+                        <a href="http://www.ssamsweb.com/0821/kys/ediya_upload231227/" target="_blank">ediya</a>
+                    </div>
+                </div>
             </div>
             <div class="hiddenMenu">
-                <div class="hiddenHeader">Contact</div>
+                <h2 class="hiddenHeader">Contact</h2>
+                <div class="hiddenConBox">
+                    <a href="https://miseullang.tistory.com/" target="_blank">Blog</a>
+                    <p onclick="copyEmail()">E-mail</p>
+                    <a href="https://open.kakao.com/o/syEly7Yf" target="_blank">kakoTalk</a>
+                </div>
             </div>
         </div>
         <div class="fixButWrap borderColor">
@@ -73,13 +106,13 @@
                     <a href="#personal">Personal</a>
                     <ul class="subMenuWrap borderColor">
                         <li class="subMenu borderColor">
-                            <a href="http://www.ssamsweb.com/0821/kys/mmaa/">MMAA</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">MMAA</a>
                         </li>
                         <li class="subMenu borderColor">
-                            <a href="http://www.ssamsweb.com/0821/kys/aladin/">aladin</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/aladin/" target="_blank">aladin</a>
                         </li>
                         <li class="subMenu borderColor">
-                            <a href="http://www.ssamsweb.com/0821/kys/">ctd pretzel</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/etude" target="_blank">ctd pretzel</a>
                         </li>
                         <li class="subMenu borderColor">
                             <a href="#">etude</a>
@@ -90,13 +123,13 @@
                     <a href="#team">Team</a>
                     <ul class="subMenuWrap borderColor">
                         <li class="subMenu borderColor">
-                            <a href="#">pawinhand</a>
+                            <a href="#">PH store</a>
                         </li>
                         <li class="subMenu borderColor">
-                            <a href="http://www.ssamsweb.com/0821/kys/diptyque/">diptque</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/diptyque/" target="_blank">diptque</a>
                         </li>
                         <li class="subMenu borderColor">
-                            <a href="http://www.ssamsweb.com/0821/kys/ediya_upload231227/">ediya</a>
+                            <a href="http://www.ssamsweb.com/0821/kys/ediya_upload231227/" target="_blank">ediya</a>
                         </li>
                     </ul>
                 </li>
@@ -210,48 +243,132 @@
             <div class="titleWrap borderColor">
                 <h2 class="portfolioTitle">
                     <span style="animation-delay: 0s;">P</span>
-                    <span style="animation-delay: 0.2s;">o</span>
-                    <span style="animation-delay: 0.4s;">r</span>
-                    <span style="animation-delay: 0.6s;">t</span>
-                    <span style="animation-delay: 0.8s;">f</span>
-                    <span style="animation-delay: 1s;">o</span>
-                    <span style="animation-delay: 1.2s;">l</span>
-                    <span style="animation-delay: 1.4s;">i</span>
-                    <span style="animation-delay: 1.6s;">o</span>
+                    <span style="animation-delay: 0.1s;">o</span>
+                    <span style="animation-delay: 0.2s;">r</span>
+                    <span style="animation-delay: 0.3s;">t</span>
+                    <span style="animation-delay: 0.4s;">f</span>
+                    <span style="animation-delay: 0.5s;">o</span>
+                    <span style="animation-delay: 0.6s;">l</span>
+                    <span style="animation-delay: 0.7s;">i</span>
+                    <span style="animation-delay: 0.8s;">o</span>
                 </h2>
                 <em>personal</em>
             </div>
-            <div class="inPage">
-                <div class="leftCon">
-                    <div class="toolBox">
-                        <span class="tools">swiper.js</span><br>
-                        <span class="tools">Photoshop</span><span class="tools">Premiere Pro</span><br>
-                        <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">Javascript</span><br>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="leftCon">
+                            <div class="toolBox">
+                                <span class="tools">swiper.js</span><br>
+                                <span class="tools">Photoshop</span><span class="tools">Premiere Pro</span><br>
+                                <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">Javascript</span><br>
+                            </div>
+                            <h4>제작기간 1/8 - 1/12(5일)</h4>
+                            <p>공백 없이 화면에 가득찬 텍스트로 피로감을 주던 기존 사이트를, <br>
+                            페이지 단위로 중심 컨텐츠를 나누어 시각적 피로감을 덜 수 있도록 리뉴얼했습니다.<br>
+                            애니메이션 효과를 활용해 부드럽게 나타나도록 구성했습니다.<br>
+                            <strong>반응형</strong>으로 제작하였으며, <strong>검색창</strong>과 <strong>로그인</strong>화면까지 세밀히 구현하였습니다.
+                            </p>
+                        </div>
+                        <div class="rightCon borderColor">
+                            <h3 class="projectName">MMAA</h3>
+                            <div class="shortCutBox">
+                                <a href="https://www.mmaa.or.kr/web/main/index.do" target="_blank">origin site →</a>
+                                <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">renewal site →</a>
+                            </div>
+                            <div class="imgBox">
+                                <img src="./img/Screenshot 2024-01-21 at 13.40.39.JPG" alt="군인공제회 미리보기">
+                            </div>
+                        </div>
                     </div>
-                    <p>공백 없이 화면에 가득찬 텍스트로 피로감을 주던 기존 사이트를, <br>
-                    공백을 활용해 재배치하고 애니메이션 효과를 활용해 부드럽게 나타나도록
-                    구성했습니다.<br>
-                    <strong>반응형</strong>으로 제작하였으며, <strong>검색창</strong>과 <strong>로그인</strong>화면까지 세밀히 구현하였습니다.
-                    </p>
+                    <div class="swiper-slide">
+                        <div class="leftCon">
+                            <div class="toolBox">
+                                <span class="tools">swiper.js</span><br>
+                                <span class="tools">Photoshop</span><span class="tools">Illustrator</span><br>
+                                <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">Javascript</span><br>
+                            </div>
+                            <h4>제작기간 12/30 - 1/5(6일)</h4>
+                            <p>
+                                기존 페이지는 컨텐츠는 많고 폰트는 작아 집중이 분산되는 단점이 있었습니다.<br>
+                                이를 보완하기 위해 메인 컨텐츠 중심으로 레이아웃을 만들고 , 폰트 크기를 키워 가독성을 높였습니다.<br>
+                                반응형이 자연스럽게 구현되는 것에 초점을 맞추어 제작했습니다.<br>
+                            </p>
+                        </div>
+                        <div class="rightCon borderColor">
+                            <h3 class="projectName">aladin</h3>
+                            <div class="shortCutBox">
+                                <a href="https://www.aladin.co.kr" target="_blank">origin site →</a>
+                                <a href="http://www.ssamsweb.com/0821/kys/aladin/" target="_blank">renewal site →</a>
+                            </div>
+                            <div class="imgBox">
+                                <img src="./img/aladin_preview.JPG" alt="알라딘 미리보기">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="leftCon">
+                            <div class="toolBox">
+                                <span class="tools">swiper.js</span><br>
+                                <span class="tools">Photoshop</span><span class="tools">Illustrator</span><br>
+                                <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">JQuery</span><br>
+                            </div>
+                            <h4>제작기간 11/13 - 12/28(약 1달)</h4>
+                            <p>첫번째로 만든 포트폴리오 사이트입니다.<br>
+                            <strong>동료들과 잘 어울리는 사람</strong>임을 의미하는 매듭 모양의 프레즐을 컨셉으로 제작하였습니다.<br>
+                            </p>
+                        </div>
+                        <div class="rightCon borderColor">
+                            <h3 class="projectName">ctd pretzel</h3>
+                            <div class="shortCutBox">
+                                <a href="http://www.ssamsweb.com/0821/kys/" target="_blank">visit site →</a>
+                            </div>
+                            <div class="imgBox">
+                                <img src="./img/ctdPretzel_preview.png" alt="포트폴리오 버전 1 미리보기">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="leftCon">
+                            <div class="toolBox">
+                                <span class="tools">swiper.js</span><br>
+                                <span class="tools">Photoshop</span><span class="tools">Illustrator</span><br>
+                                <span class="tools">HTML</span><span class="tools">CSS</span><span class="tools">JQuery</span><br>
+                            </div>
+                            <h4>제작기간 8/31 - 9/11(9일)</h4>
+                            <p>처음으로 퍼블리싱을 한 사이트입니다.<br>
+                            에뛰드의 상징인 핑크와 기초 라인인 '순정'의 푸른색을 함께 담았습니다.
+                            </p>
+                        </div>
+                        <div class="rightCon borderColor">
+                            <h3 class="projectName">etude</h3>
+                            <div class="shortCutBox">
+                                <a href="https://www.etude.com" target="_blank">origin site →</a>
+                                <a href="http://www.ssamsweb.com/0821/kys/etude/" target="_blank">renewal site →</a>
+                            </div>
+                            <div class="imgBox">
+                                <img src="./img/aladin_preview.JPG" alt="에뛰드 미리보기">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="rightCon borderColor">
-                    <h3 class="projectName">MMAA</h3>
-                    <div class="shortCutBox">
-                        <a href="https://www.mmaa.or.kr/web/main/index.do" target="_blank">origin site →</a>
-                        <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">renewal site →</a>
-                    </div>
-                    <div class="imgBox">
-                        <img src="./img/Screenshot 2024-01-21 at 13.40.39.JPG" alt="mmaa 미리보기">
-                    </div>
-                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
         <section class="page teamPage" id="team">
             <div class="stickyBox borderColor">
-                <h2 class="teamTitle">Team Project</h2>
+                <h2 class="teamTitle"><em>Team</em>&nbsp;Project</h2>
                 <div class="inSection">
                     <div class="projectTitle borderColor">
-                        <h3>● pawinhand</h3>
+                        <h3>● pawinhand store</h3>
                         <div class="shortCutBox">
                             <a href="https://www.mmaa.or.kr/web/main/index.do" target="_blank">origin site →</a>
                             <a href="http://www.ssamsweb.com/0821/kys/mmaa/" target="_blank">renewal site →</a>
@@ -274,17 +391,20 @@
                     <div class="projectContent">
                         <img src="./img/diptyque_preview.jpg" alt="딥티크 프리뷰">
                         <div class="participant gridItem">2인 프로젝트</div>
-                        <div class="plan gridItem">기획 및 시안 작업 10/18 - 20<br>
+                        <div class="plan gridItem">기획 및 시안 작업 10/18 - 10/20<br>
                             퍼블리싱 10/21 - 10/24<br>
-                            피드백 & 수정 10/25 - 26
+                            피드백 & 수정 10/25 - 10/26
                         </div>
                         <div class="part gridItem">
-                            시안 : 각자 페이지를 레퍼런스와 사용할 이미지/영상을 보내면 상대가 정리하는 방식으로 공동 작업
-                            퍼블리싱 : main 및 productPage 담당, 취합 담당
+                            시안 : 각자 페이지를 레퍼런스와 사용할 이미지/영상을 보내면 상대가 정리하는 방식으로 공동 작업<br>
+                            퍼블리싱 : main 및 productPage 담당, 취합 담당<br>
                             기타 영상 및 이미지 편집 담당
                         </div>
                         <div class="projectText gridItem">
-                            이렇게 저렇게 해서 만들게 되었습니다
+                            딥티크가 만드는 모든 제품에는 저마다의 이야기가 담겨있습니다.<br>
+                            예쁘게 포장된 인공적인 향보다 이야기가 담긴 자연의 향을 추구하는 딥티크의 브랜드 정신을 담아,
+                            화면을 하나의 광고면으로 활용한 리뉴얼 페이지입니다.<br>
+                            스크롤 이벤트를 중심으로 기능을 구현하였습니다.
                         </div>
                         <div class="usingTool gridItem">
                             <span class="tools">Photoshop</span><span class="tools">Illustrator</span><span class="tools">Premiere Pro</span><br>
@@ -302,18 +422,18 @@
                     </div>
                     <div class="projectContent">
                         <img src="./img/ediya_preview.png" alt="이디야 프리뷰">
-                        <div class="participant gridItem">3인 프로젝트 → 2인 리팩토링</div>
-                        <div class="plan gridItem">기획 및 시안 작업 10/18 - 20<br>
+                        <div class="participant gridItem">3인 프로젝트 → 2인 수정</div>
+                        <div class="plan gridItem">기획 및 시안 작업 10/18 - 10/20<br>
                             퍼블리싱 10/21 - 10/24<br>
                             피드백 & 수정 10/25 - 26
                         </div>
                         <div class="part gridItem">
-                            시안 : 각자 페이지를 레퍼런스와 사용할 이미지/영상을 보내면 상대가 정리하는 방식으로 공동 작업
-                            퍼블리싱 : main 및 productPage 담당, 취합 담당
-                            기타 영상 및 이미지 편집 담당
+                            시안 : 메인 페이지 공동작업, best menu, Ediya meal 페이지, 푸터<br>
+                            퍼블리싱 : 메인 페이지, best menu, Ediya meal 페이지, 푸터, 탑버튼, 취합 및 이미지 편집 담당
                         </div>
                         <div class="projectText gridItem">
-                            이렇게 저렇게 해서 만들게 되었습니다
+                           타 프랜차이즈와 차별화 되는 이디야만의 강점을 부각할 수 있도록 리뉴얼하는 것에 초점을 두었습니다.
+                           이디야에서만 만날 수 있는 식사 메뉴들을 소개하는 것을 중점으로 한 리뉴얼 페이지입니다.
                         </div>
                         <div class="usingTool gridItem">
                             <span class="tools">Photoshop</span><span class="tools">Illustrator</span><br>
@@ -331,9 +451,9 @@
                 <img src="./img/whiteFish.png" alt="흰물고기">
             </div> -->
             <div class="conBox borderColor">
-                <a href="#" class="contactLink borderColor blog">Blog <i></i></a>
-                <a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fm.mail.naver.com%2F" class="contactLink borderColor eMail">E-mail <i></i></a>
-                <a href="https://open.kakao.com/o/syEly7Yf" class="contactLink borderColor kakoTalk">kakoTalk <i></i></a>
+                <a href="https://miseullang.tistory.com/" target="_blank" class="contactLink borderColor blog">Blog <i></i></a>
+                <p onclick="copyEmail()" class="contactLink borderColor eMail">E-mail <i></i></p>
+                <a href="https://open.kakao.com/o/syEly7Yf" target="_blank" class="contactLink borderColor kakoTalk">kakoTalk <i></i></a>
             </div>
             <footer>
                 <h4 class="footerTitle">Yoonseul<br>Portfolio<br>ver.2</h4>
@@ -341,8 +461,8 @@
                     <div class="footFirstLine">
                         <p class="borderColor">ⓒ2024</p><p>Kweon Yoonseul.</p><p class="borderColor">All Rights Reserved.</p>
                         <p class="borderColor">본 사이트는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
-                        <a class="borderColor" href="#"><span>ver.1</span><i></i></a>
-                        <a class="borderColor" href="#"><span>site plan</span><i></i></a>
+                        <a class="borderColor" href="http://www.ssamsweb.com/0821/kys/" target="_blank"><span>ver.1</span><i></i></a>
+                        <a class="borderColor" href="#" target="_blank"><span>site plan</span><i></i></a>
                     </div>
                 </div>
             </footer>

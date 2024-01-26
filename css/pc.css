@@ -1,3 +1,15 @@
+.notice{
+    position: relative;
+    width: 100%; height: 50px;
+    background-color: #111; color: #ffffff;
+    display: flex; justify-content: center; align-items: center;
+    cursor: pointer;
+    font-weight: 100;
+}
+.notice i{
+    margin-left: 25px;
+    font-size: 12px;
+}
 .wrap{
     padding: 0 2.5rem; box-sizing: border-box;
     background-color: #ffffff; color: #111;
@@ -5,13 +17,16 @@
 /* 공통영역 ========================= */
 .tools{
     display: inline-block;
-    padding: 5px 10px; box-sizing: border-box;
+    padding: 3px 8px; box-sizing: border-box;
     border-radius: 2.5px;
     background-color: rgba(127, 127, 127, 0.5); color: #ffffff;
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-right: 15px;
-}    
+    font-size: 1.7rem;
+    margin-top: 0.7rem;
+    margin-right: 12px;
+}
+.tools:is(:first-child)  {
+    margin-top: 0;
+} 
 /* 2페이지부터 등장하는 고정 메뉴 ========================================== */
 .fixButWrap{
     width: 60px; height: 120px;
@@ -85,16 +100,47 @@
     border: 1px solid #111; box-sizing: border-box;
     border-top: none; border-bottom: none;
     width: 25%; height: 100%;
+    display: flex; justify-content: space-around; align-items: center;
     overflow: hidden;
+    transition: width 0.4s;
+}
+.headerWidth{
+    width: 50vw;
+}
+.otherHeaderWidth{
+    width: calc(50vw / 3);
+}
+.headerWidth .clickHeaderWidth{
+    width: 10rem;
+}
+.headerWidth .conBoxOpen {
+    visibility: visible;
+    width: calc(100% - 10rem);
 }
 .hiddenHeader{
-    font-size: 2rem;
-    width: calc(100vw / 4); height: 100%;
+    font-size: 1.6rem; font-weight: 600;
+    width: 100%; height: 100%;
     display: flex; justify-content: center; align-items: center;
+    cursor: pointer;
 }
-/* .hiddenMenu:not(:last-child){
-    border-right: 1px solid #111; box-sizing: border-box;
-} */
+.hiddenConBox{
+    visibility: hidden;
+    width: 0; height: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+.hiddenConBox a,.hiddenConBox p{
+    display: block; text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem 0; box-sizing: border-box;
+    cursor: pointer;
+}
+.hiddenConBox .conTitle{
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-size: 3rem;
+    padding: 1rem 0; box-sizing: border-box;
+}
 /* 숨김메뉴 끝 ================================================================ */
 
 /* 헤더 ==================================================================== */
@@ -153,6 +199,9 @@ header{
     color: #111;
     border: 1px solid #111;
     border-top: none;
+}
+.subMenu:is(:first-child){
+    border-top: 1px solid #111;
 }
 .subMenu:hover{
     background-color: #111;
@@ -360,7 +409,9 @@ header{
 /* 어바웃 페이지 끝 ============================================================================= */
 
 /* 스킬페이지 =================================================================================== */
-
+.skillPage{
+    height: 1000px;
+}
 .skillsWrapper{
     width: 100%; height: 800px;
     border-top: 1px solid; border-bottom: 1px solid;
@@ -413,7 +464,11 @@ header{
     padding: 2.5rem; box-sizing: border-box;
     position: relative;
 }
-
+.skillBody .tools{
+    font-size: 2.2rem;
+    padding: 0.4rem 0.8rem;
+    margin-top: 0.7rem;
+}
 .bottomText{
     position: absolute; bottom: -15px; right: -5px;
     font-size: 8vw; font-weight: 700;
@@ -434,16 +489,13 @@ header{
 /* 스킬페이지 끝 =================================================================== */
 
 /* 포트폴리오 페이지 ================================================================ */
-.innerPage{
-    width: 100%; height: 100%;
-    border: 1px solid #111;
-}
+
 .titleWrap{
     position: absolute; top: 1rem; left: 0; z-index: 5;
-    width: 50%; height: 18.5rem;
+    width: 50%; height: 14.5rem;
 }
 .portfolioTitle {
-    font-size: 10rem;
+    font-size: 8rem;
     display: flex; 
     justify-content: left; 
     align-items: center;
@@ -469,29 +521,34 @@ header{
     }
 }
 .portfolioTitle ~ em{
-    font-family: 'Playfair Display', serif;
-    font-size: 8rem; color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-size: 7rem; color: #333;
     position: absolute; bottom: 1.5rem; left: 0;
 }
 /* 포트폴리오 페이지 안 타이틀 부분 끝 ---------------------- */
-.inPage{
-    width: calc(97vw - 2rem); height: calc(90vh - 2rem);
-    position: absolute; top: 1rem; left: 1rem;
+.personalPage .swiper{
+    width: 100%; height: 100%;
+    position: absolute; top: -2rem; left: 0;
+}
+.personalPage .swiper-slide{
+    width: 100%; height: calc(100% - 2rem);
     display: flex; justify-content: space-around; align-items:end;
-    padding-right: 2rem; box-sizing: border-box;
 }
 .leftCon{
     width: 65%; height: fit-content;
     display: flex; flex-direction: column; align-items: end;
-    /* background-color: palegreen; */
 }
 .toolBox{
     width: 100%;
-    /* background-color: palegoldenrod; */
 }
-
-.toolBox ~ p{
+.toolBox ~ h4{
     margin-top: 1.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.8rem 0; box-sizing: border-box;
+}
+.toolBox ~ p{
+    padding-bottom: 1rem;
     width: 100%;
     font-size: 1.3rem;
     color: #535353;
@@ -521,10 +578,16 @@ header{
 .shortCutBox a:not(:last-child){
     margin-right: 15px;
 }
+
 .shortCutBox a:hover{
     border-color: #111;
     color: #111;
     background-color: #ffffff;
+}
+.projectName ~ .shortCutBox>a:hover{
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: #111;
 }
 .imgBox{
     width: 100%; height: calc(100% - 10rem);
@@ -559,6 +622,11 @@ header{
     font-size: 10rem;
     text-align: center;
     background-color: #ffffff;
+}
+.teamTitle em{
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    font-weight: 400;
 }
 .inSection {
     width: 100%;
@@ -656,12 +724,24 @@ header{
 }
 .contactLink i{
     width: 8rem; height: 8rem;
-    background-color: #0f63ff;
+    margin-right: 1.5rem;
 }
-.contactLink:first-child{
-    text-decoration:line-through;
-    font-style: italic;
-    color: #333;
+.blog i{
+    background: url(../img/arrow_1.png) center center no-repeat;
+    background-size: contain;
+}
+.eMail{
+    cursor: pointer;
+}
+.eMail i{
+    background: url(../img/arrow_1.png) center center no-repeat;
+    background-size: contain;
+    rotate: 45deg;
+}
+.kakoTalk i{
+    background: url(../img/arrow_1.png) center center no-repeat;
+    background-size: contain;
+    rotate: 90deg;
 }
 .contactLink:last-child{
     border-bottom: 1px solid #111; box-sizing: border-box;
@@ -670,6 +750,9 @@ header{
     background-color: #111;
     border-color: #ffffff;
     color: #ffffff;
+}
+.contactLink:hover i{
+    filter: invert(100%);
 }
 footer{
     width: 100%;
@@ -700,5 +783,6 @@ footer{
     display: inline-block;
     width: 1rem; height: 1rem;
     margin-left: 0.5rem;
-    background-color: palegreen;
+    background: url(../img/arrow_1.png) center center no-repeat;
+    background-size: contain;
 }
