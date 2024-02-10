@@ -330,7 +330,7 @@ class FolderScroll {
     this.stickyBox = stickyBox
     this.inSections = this.stickyBox.querySelectorAll(".inSection")
     this.length = this.inSections.length
-    this.headerHeight = 6 //인섹션 헤더 높이 6vh
+    this.headerHeight = (window.innerWidth <= 649) ? 12 : 6; // 인섹션 헤더 높이 (모바일에서는 10vh)
     this.contentHeight = 100 - this.headerHeight * this.length
     //헤더 높이*갯수 뺀 만큼을 내용 영역으로 갖기
     this.start = 0

@@ -1,4 +1,7 @@
-@media all and (min-width : 1200px) {
+@media all and (max-width : 849px) and (min-width : 650px) {
+    html,body {
+        font-size: 14px;
+    }
     .notice{
         position: relative;
         width: 100%; height: 50px;
@@ -16,7 +19,7 @@
         background-color: #ffffff; color: #111;
     }
     .m_br{
-        display: none;
+        display: block;
     }
     /* 공통영역 ========================= */
     .tools{
@@ -152,13 +155,13 @@
         width: 100%; height: 80px;
         border-bottom: 1px solid; border-color: #111;
         box-sizing: border-box;
-        display: flex; justify-content: space-around;
+        display: flex; justify-content: space-between;
         text-align: center;
         font-size: 1.2rem;
         position: relative; z-index: 98;
     }
     .logoBox{
-        width: 220px; height: 100%;
+        width: 160px; height: 100%;
         border-right: 1px solid; border-color: #111;
         box-sizing: border-box;
         padding: 1rem; box-sizing: border-box;
@@ -168,15 +171,14 @@
         object-fit: contain;
     }
     .etcBox{
-        width: 220px; height: 100%;
+        width: 160px; height: 100%;
         border-left: 1px solid; border-color: #111;
         box-sizing: border-box;
         padding: 1rem; box-sizing: border-box;
         display: flex; justify-content: space-around; align-items: center;
     }
     .topMenuWrap{
-        width: calc(100% - 400px); height: 80px;
-        display: flex; justify-content: center; align-items: center;
+        visibility: hidden;
     }
     .topMenu:not(:last-child){
         margin-right: 15px;
@@ -248,13 +250,13 @@
         height: 150vh;
     }
     .wordWrap{
-        font-size: 2.8rem;
+        font-size: 1.8rem;
         position: absolute; top: 5rem; left: 0;
-        width: 100%; height: 11rem;
+        width: 100%; height: 7rem;
     }
     .txtBox{
         position: absolute;
-        width: 100%; height: 5rem;
+        width: 100%; height: 3.2rem;
         overflow: hidden;
     }
     .firstLine{
@@ -310,7 +312,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12vw;
+        font-size: 8rem;
         transform: scale(1.5) translateY(-100%);
         opacity: 0;
         transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
@@ -321,12 +323,12 @@
     }
     .card-frame {
         position: absolute;
-        width: 95vw; height: 32vw;
-        display: flex; align-items: center; justify-content: space-around;
+        width: 95vw; height: 36vw;
+        display: flex; align-items: center; justify-content: center;
     }
     .card {
         position: relative;
-        width: 24vw; height: 100%;
+        width: 26vw; height: 100%; margin: 0 5px;
         display: flex; justify-content: space-around; align-items: center;
         transform-style: preserve-3d;
         transform: perspective(100vw) translateX(100vw) rotateY(180deg);
@@ -342,11 +344,11 @@
     .front {
         background-color: #ffffff; color: #111;
         display: flex; flex-direction: column;
-         justify-content: center;
+        justify-content: center;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         border: 1px solid #111 ;
-        padding: 2rem; box-sizing: border-box;
+        padding: 1.5rem; box-sizing: border-box;
     }
     .back {
         transform: rotateY(180deg);
@@ -370,7 +372,6 @@
     .profileCard span {
         width: 100%; text-align: center;
         margin-bottom: 0.5rem;
-        font-size: 1.3rem;
     }
     .txtCard .front{
         text-align: left;
@@ -379,7 +380,6 @@
         font-weight: 700;
         display: block;
         width: 100%;
-        font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
     .txtCard p{
@@ -390,7 +390,6 @@
         margin-bottom: 0.5rem;
     }
     .licenseCard span{
-        font-size: 1.8rem;
         margin-bottom: 0;
     }
     @media screen and (orientation:portrait) {
@@ -414,20 +413,19 @@
     
     /* 스킬페이지 =================================================================================== */
     .skillPage{
-        height: 1000px;
+        height: 1400px;
     }
     .skillsWrapper{
-        width: 100%; height: 800px;
-        border-top: 1px solid; border-bottom: 1px solid;
+        width: 100%; height: 1200px;
+        border-bottom: 1px solid;
         border-color: #111;
         box-sizing: border-box;
     }
     .leftBox{
-        width: 30%; height: 100%;
-        border-right: 1px solid #111;
-        padding: 2.5rem 2.5rem 2.5rem 0; box-sizing: border-box;
+        width: 100%; height: 400px;
+        border: 1px solid #111;
+        padding: 1.5rem; box-sizing: border-box;
         font-size: 2.3rem;
-        float: left;
     }
     .skillTitle{
         margin-bottom: 1.5rem;
@@ -437,8 +435,7 @@
         object-fit: cover;
     }
     .rightBox{
-        width: 70%; height: 100%;
-        float: right;
+        width: 100%; height: 100%;
     }
     .skillTab{
         height: 158px;
@@ -493,7 +490,9 @@
     /* 스킬페이지 끝 =================================================================== */
     
     /* 포트폴리오 페이지 ================================================================ */
-    
+    .personalPage{
+        height: 200vh;
+    }
     .titleWrap{
         position: absolute; top: 1rem; left: 0; z-index: 5;
         width: 50%; height: 14.5rem;
@@ -536,10 +535,10 @@
     }
     .personalPage .swiper-slide{
         width: 100%; height: calc(100% - 2rem);
-        display: flex; justify-content: space-around; align-items:end;
     }
     .leftCon{
-        width: 65%; height: fit-content;
+        margin-top: 18rem;
+        width: 100%; height: fit-content;
         display: flex; flex-direction: column; align-items: end;
     }
     .toolBox{
@@ -558,7 +557,8 @@
         color: #535353;
     }
     .rightCon{
-        width: 45%; height: 95%;
+        margin-top: 1rem;
+        width: 100%; height: 100vh;
         border: 1px solid #111;
         padding: 0.5rem 1rem; box-sizing: border-box;
         text-align: right;
@@ -621,9 +621,10 @@
         width: 100%;
         height: 82vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 10rem;
+        font-size: 8rem;
         text-align: center;
         background-color: #ffffff;
     }
@@ -658,7 +659,7 @@
     .projectContent {
         height: 94vh;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 35% 65%;
         grid-template-rows: 3.5rem repeat(4, calc((99% - 3.5rem) / 4));
         grid-template-areas:
             "img participant participant"
@@ -724,10 +725,10 @@
         width: 100%; height: calc(100% / 3);
         border-top: 1px solid #111; box-sizing: border-box;
         display: flex; justify-content: space-between; align-items: center;
-        font-size: 7rem; font-weight: 500;
+        font-size: 6rem; font-weight: 500;
     }
     .contactLink i{
-        width: 8rem; height: 8rem;
+        width: 6rem; height: 6rem;
         margin-right: 1.5rem;
     }
     .blog i{
@@ -773,12 +774,17 @@
     }
     .footFirstLine{
         display: flex; justify-content: space-between; align-items: center;
+        flex-wrap: wrap;
     }
     .footFirstLine p,.footFirstLine a{
         padding: 0.5rem 0.8rem;
         border-right: 1px solid #111; box-sizing: border-box;
         text-align: center;
         display: flex; justify-content: center; align-items: center;
+    }
+    .statement {
+        border-top: 1px solid #111;
+        border-bottom: 1px solid #111;
     }
     .footFirstLine a:last-child{
         border: none;
