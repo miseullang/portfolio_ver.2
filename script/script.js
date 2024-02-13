@@ -410,10 +410,3 @@ function copyEmail() {
   // 복사되었다는 메시지를 표시
   alert("이메일 주소가 복사되었습니다: " + email);
 }
-
-
-// 팝업창
-const notice = document.querySelector(".notice");
-notice.addEventListener('click',() => {
-  notice.style.display = "none"
-})
